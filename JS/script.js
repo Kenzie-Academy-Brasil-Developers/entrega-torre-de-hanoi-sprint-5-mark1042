@@ -11,6 +11,7 @@ function createTowers() {
         div.id = `torre${i+1}`
         div.addEventListener('click', function(e){
             torreSelecionada = e.currentTarget;
+            moveDisk();
         })
         sectionTorres.appendChild(div)
     } 
