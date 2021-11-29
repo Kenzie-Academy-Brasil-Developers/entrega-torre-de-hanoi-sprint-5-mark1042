@@ -28,7 +28,6 @@ function createDisk () {
         disk.style.marginBottom = "2px";
         disk.addEventListener('click', function(e){
             discoSelecionado = e.currentTarget;
-            console.log(e.currentTarget);
         })
         towers[0].push(disk)
     }
