@@ -26,19 +26,24 @@ main {
 }
 .torre1 {
     margin-bottom: 2px;
+    cursor: pointer;
+
 }
+
 .disco1 {
     background-color: white;
     height: 20px;
     width: 150px;
     border-radius: 20px;
-    transition: all 1s;
+    
+    
 }
 .disco2 {
     background-color: white;
     height: 20px;
     width: 130px;
     border-radius: 20px;
+    
 }
 .disco3 {
     background-color: white;

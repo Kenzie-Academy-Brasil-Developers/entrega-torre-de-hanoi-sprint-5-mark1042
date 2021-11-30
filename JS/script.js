@@ -1,12 +1,19 @@
-let towers = [  [],
-                [],
-                []]
 const sectionTorres = document.getElementById('sectionTorres')
+let torreSelecionada
+let discoSelecionado
+
 
 function createTowers() {
     for (let i = 0; i < 3; i++) {      
         const div = document.createElement('div')
         div.classList.add('torres')
+        div.id = `torre${i+1}`
+        div.addEventListener('click', function(e){
+            torreSelecionada = e.currentTarget;
+            if (torreSelecionada.lastChild < discoSelecionado.clientWidth){
+                moveDisk(torreSelecionada, discoSelecionado);
+            }
+        })
         sectionTorres.appendChild(div)
     } 
 }
@@ -19,15 +26,14 @@ function createDisk () {
         const disk = document.createElement('div')
         torres.parentElement.children[0].appendChild(disk)
         disk.className = `torre1 disco${i+1}`
-
-        towers[0].push(disk)
+        disk.id = `disco${i+1}`
+        disk.addEventListener('click', function(e){
+            discoSelecionado = e.currentTarget;
+        })
     }
 }
 createDisk()
 
-function moveDisk () {
-    const disk = document.querySelectorAll('.torre1')
-    console.log(disk)
+function moveDisk(torre, disco){
+    torre.appendChild(disco);
 }
-moveDisk()
-
