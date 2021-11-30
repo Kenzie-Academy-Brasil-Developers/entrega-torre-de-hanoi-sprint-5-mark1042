@@ -39,7 +39,11 @@ let discoSelecionado = document.getElementById("disco5");
 let torreSelecionada = document.getElementById("torre1");
 
 function moveDisk(){
-    torreSelecionada.appendChild(discoSelecionado);
+    if(torreSelecionada.lastChild === null){
+        torreSelecionada.appendChild(discoSelecionado);      
+    }else if(torreSelecionada.lastChild.clientWidth > discoSelecionado.clientWidth){
+        torreSelecionada.appendChild(discoSelecionado);
+    }
 }
 
 //moveDisk()
