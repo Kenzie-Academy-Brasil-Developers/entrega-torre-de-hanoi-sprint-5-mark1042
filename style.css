@@ -46,3 +46,8 @@
     background-color: salmon;
     border-radius: 5px;
 }
+
+#movimentos{
+    margin: 0 auto;
+    border: 1px solid black;
+}

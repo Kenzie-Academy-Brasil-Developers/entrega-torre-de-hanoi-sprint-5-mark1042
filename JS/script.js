@@ -2,6 +2,7 @@ let towers = [  [],
                 [],
                 []]
 const sectionTorres = document.getElementById('sectionTorres')
+let movimentos = 0;
 
 
 function createTowers() {
@@ -38,13 +39,21 @@ createDisk()
 let discoSelecionado = document.getElementById("disco5");
 let torreSelecionada = document.getElementById("torre1");
 
+let contadorMovimentos = document.createElement("DIV");
+contadorMovimentos.textContent = `Número de movimentos:${movimentos}`;
+
 function moveDisk(){
     if(torreSelecionada.lastChild === null){
-        torreSelecionada.appendChild(discoSelecionado);      
+        torreSelecionada.appendChild(discoSelecionado);  
+        movimentos++;    
     }else if(torreSelecionada.lastChild.clientWidth > discoSelecionado.clientWidth){
         torreSelecionada.appendChild(discoSelecionado);
+        movimentos++;
     }
+    contadorMovimentos.textContent = `Número de movimentos:${movimentos}`;
 }
-
+contadorMovimentos.style.border = "1px solid black";
+contadorMovimentos.style.textAlign = "center";
+document.body.appendChild(contadorMovimentos);
 //moveDisk()
 
