@@ -28,7 +28,7 @@ function createDisk () {
         disk.id = `disco${i+1}`
         disk.style.marginBottom = "2px";
         disk.addEventListener('click', function(e){
-            discoSelecionado = e.currentTarget;
+                discoSelecionado = e.currentTarget.parentElement.lastChild;
         })
         towers[0].push(disk)
     }
