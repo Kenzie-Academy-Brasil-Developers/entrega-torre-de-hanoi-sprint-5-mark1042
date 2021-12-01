@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200&family=Permanent+Marker&family=Roboto:wght@300&display=swap');
 body {
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(0,139,250,1) 100%);
+    background: #003366 
 }
 main {
     height: 100vh;
@@ -19,8 +19,9 @@ button {
     width: 150px;
     cursor: pointer;
     border-radius: 50px;
-    border-color: purple;
+    border-color: #000;
     font-family: 'Permanent Marker', cursive;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.68)
     
 }
 button:hover {
@@ -32,6 +33,7 @@ h1 {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     margin-top: 45px;
+    color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
